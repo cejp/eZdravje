@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>eZdravje :: 4. DN :: OIS 2015/2016</title>
+  <link href="knjiznice/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {padding-top: 70px;}
+  </style>
+  <script src="knjiznice/js/jquery-2.2.3.min.js"></script>
+  <script src="knjiznice/js/bootstrap.min.js"></script>
+  <script src="knjiznice/js/koda.js"></script>
+</head>
+<body>
+
+  <!-- ZACETEK: Menujska vrstica na vrhu spletne strani -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menujska-vrstica">
+          <span class="sr-only">Prikaži menu</span>
+          <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+        <!-- ZACETEK: Ime vaše aplikacije -->
+        <a class="navbar-brand" href="index.html">Kontroler Teže</a>
+        <!-- KONEC: Ime vaše aplikacije -->
+      </div>
+      <div class="collapse navbar-collapse" id="menujska-vrstica">
+        <ul class="nav navbar-nav">
+          <li><a href="opis.html">Opis ideje</a></li>
+          <li><a href="nacrt.html">Načrt informacijske rešitve</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- KONEC: Menujska vrstica na vrhu spletne strani -->
+
+  <!-- ZACETEK: Opis delovanja aplikacije -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Opis ideje, ki jo aplikacija podpira</h3>
+          </div>
+          <div class="panel-body">
+            <!-- ZACETEK: Opis ideje, ki jo aplikacija podpira -->
+            <p>Aplikacija je namenjena osebam, ki hocejo pregeldati fizično stanje, oziroma višino in težo. S tem potem lahko potem aplikacija sklepa stanje osebe.</p>
+            <!-- KONEC: Opis ideje, ki jo aplikacija podpira -->
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Uporabljeni zunanji viri podatkov</h3>
+          </div>
+          <div class="panel-body">
+            <!-- ZACETEK: Uporabljeni zunanji viri podatkov -->
+            <p>Uporabil sem samo en zunanji vir, v tem je opisana formula za izračun idealne teže.</p>
+			      <a href="http://www.cdc.gov/healthyweight/assessing/bmi/adult_bmi/index.html#Interpreted">Ideal Weight</a>
+			      <p>Poleg znanjega pa še ehr vir:</p>
+			      <a href="https://www.ehrscape.com/phr.html">Patient Health Record</a>
+            <!-- KONEC: Uporabljeni zunanji viri podatkov -->
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Master/detail nacrtovalski vzorec</h3>
+          </div>
+          <div class="panel-body">
+            <!-- ZACETEK: Master/detail nacrtovalski vzorec -->
+            <p>Glede, da je aplikacija osnova, bo imelo zelo malo podatdkov:<br>
+				<strong>Teža</strong><br>
+				<strong>Višina</strong><br>
+				<strong>Datum Vnosa</strong>
+			</p>
+			<p>Iz tega lahko sklepamo, ce je oseba debela, suha ali je pravilno težka</p>
+			<p>To sklepamo z naslednjo formulo: <br> <strong>Teža(kg)/Višina(m)<sup>2</sup></strong></p>
+			<p>Rezultat potem preverimo z naslednjo tabelo:</p>
+			<table style="border: 1px solid black" align="center">
+			<tr>
+				<td ><strong>BMI</strong></td>
+				<td><strong>Status Teže</strong></td>
+			</tr>
+			<tr>
+				<td>Pod 18.5</td>
+				<td>Suh</td>
+			</tr>
+			  <tr>
+				<td>18.5 - 24.9</td>
+				<td>Pravilna Teža</td>
+			  </tr>
+			  <tr>
+				<td>25 - 29.9</td>
+				<td>Prekomerno Težek</td>
+			  </tr>
+			  <tr>
+				<td>Nad 30</td>
+				<td>Debel</td>
+			  </tr>
+			</table>
+            <!-- KONEC: Master/detail nacrtovalski vzorec -->
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Uporabljena tehnika za vizualizacijo podatkov</h3>
+          </div>
+          <div class="panel-body">
+            <!-- ZACETEK: Uporabljeni zunanji viri podatkov -->
+            <p>Pri vizualizaciji bom uporabil Line Chart, saj ta je najbolj komot pri predstavitvi. Nastavil bom 3 Line Chart-e, eden za višino,težo in BMI faktor. <a href="http://bl.ocks.org/mbostock/3883245">Line Chart</a></p>
+            <!-- KONEC: Uporabljeni zunanji viri podatkov -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- KONEC: Opis delovanja aplikacije -->
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>eZdravje :: 4. DN :: OIS 2015/2016</title>
+  <link href="knjiznice/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {padding-top: 70px;}
+  </style>
+  <script src="knjiznice/js/jquery-2.2.3.min.js"></script>
+  <script src="knjiznice/js/bootstrap.min.js"></script>
+  <script src="knjiznice/js/koda.js"></script>
+</head>
+<body>
+
+  <!-- ZAČETEK: Menujska vrstica na vrhu spletne strani -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menujska-vrstica">
+          <span class="sr-only">Prikaži menu</span>
+          <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+        <!-- ZAČETEK: Ime vaše aplikacije -->
+        <a class="navbar-brand" href="index.html">Kontroler Teže</a>
+        <!-- KONEC: Ime vaše aplikacije -->
+      </div>
+      <div class="collapse navbar-collapse" id="menujska-vrstica">
+        <ul class="nav navbar-nav">
+          <li><a href="opis.html">Opis ideje</a></li>
+          <li><a href="nacrt.html">Načrt informacijske rešitve</a></li>
+          <li><a href="#">Generiranje podatkov</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- KONEC: Menujska vrstica na vrhu spletne strani -->
+
+  <!-- ZAČETEK: Vsebina aplikacije -->
+ <div class="container">
+    <div class="row">
+      <div class="col-lg-6 text-center">
+     	  <h3>Novi zapisi EHR</h3>
+     		<form role="form">
+     			<div class="form-group">
+     				<label for="ime">Ime</label>
+     				<input type="text" id="ime" class="form-control" placeholder="Peter">
+     			</div>
+     			<div class="form-group">
+     				<label for="priimek">Priimek</label>
+     				<input type="text" id="priimek" class="form-control" placeholder="Cej">
+     			</div>
+     			<div class="form-group">
+     				<label for="datum_rojstva">Datum rojstva</label>
+     				<input type="text" id="datum_rojstva" class="form-control" placeholder="10071995">
+     			</div>
+     		</form>
+     		<input id="ustvariZapis" type="button" value="Ustvari nov zapis" class="btn btn-primary">
+      </div>
+       <div class="col-lg-6 text-center">
+         <h3>Vnašanje meritev</h3>
+         <form role="form">
+           <div class="form-group">
+             <label for="ime">ehrID bolnika</label>
+             <input type="text" id="ehrid_vnos" class="form-control">
+           </div>
+           <div class="form-group">
+             <label for="ime">telesna teža</label>
+             <input type="text" id="ime" class="form-control">
+           </div>
+           <div class="form-group">
+             <label for="priimek">višina</label>
+             <input type="text" id="priimek" class="form-control">
+           </div>
+           <div class="form-group">
+             <label for="priimek">Datum Meritve</label>
+             <input type="text" id="meritve" class="form-control">
+           </div>
+         </form>
+         <input id="ustvariZapis" type="button" value="Ustvari nov zapis" class="btn btn-primary">
+       </div>
+     </div>
+     <div class="row">
+       <div class="col-lg-6 text-center">
+         <h3>Zapisi EHR o bolnikih</h3>
+         <form role="form">
+           <div class="form-group">
+             <label for="ehrid">ehrID</label>
+             <input type="text" id="ehrid_izpis" class="form-control" placeholder="">
+           </div>
+           <input id="zapis" type="button" value="Preberi" class="btn btn-primary">
+           <br><br>
+           <div class="form-group form-group-sm">
+                <label>Pacient</label>
+                 <select class="form-control" id="pac">
+				         <option>Andrea Montrone</option>
+				         <option>Andrej Mavdek</option>
+				         <option>Martin Novak</option>
+                 </select>
+                 <br>
+                 <input id="zapis" type="button" value="Preberi" class="btn btn-primary">
+               </div>
+         </form>
+       </div>
+       <div class="col-lg-6 text-center">
+           <h4>Graf zadnjih meritev</h4>
+           <button class="btn btn-default" id="prikazGraf">izriši</button>
+         </div>
+    </div>
+  </div>
+  <!-- KONEC: Vsebina aplikacije -->
+
+</body>
+</html>

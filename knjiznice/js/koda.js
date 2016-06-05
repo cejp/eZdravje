@@ -32,6 +32,22 @@ function getSessionId() {
  */
 function generirajPodatke(stPacienta) {
   ehrId = "";
+  var teza,visina,datum;
+  if(stPacienta==1){
+    teza = 50;
+    visina = 170;
+    datum = 01062016;
+  }
+  if(stPacienta==2){
+    teza = 60;
+    visina = 180;
+    datum = 02062016;
+  }
+  if(stPacienta==3){
+    teza = 70;
+    visina = 190;
+    datum = 03062016;
+  }
 
   // TODO: Potrebno implementirati
 
@@ -39,4 +55,25 @@ function generirajPodatke(stPacienta) {
 }
 
 
+
 // TODO: Tukaj implementirate funkcionalnost, ki jo podpira vaša aplikacija
+
+function calculateIMB(height,weight){
+    var factor = height/(weight*weight);
+    return factor;
+}
+
+function weightStatus(imbFactor){
+    if(imbFactor<18.5){
+        return "Suh";
+    }
+    if(imbFactor>30){
+        return "Debel";
+    }
+    if((imbFactor>=18.5)&&(imbFactor<=24.9)){
+        return "Pravilna Teža";
+    }
+    if((imbFactor>=25)&&(imbFactor<=29.9)){
+        return "Prekomerno Težek";    
+    }
+}
